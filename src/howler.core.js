@@ -1344,6 +1344,19 @@
       return self;
     },
 
+    changeSrcWinUnload: function (newSrc) {
+      let self = this;
+      self.unload();
+      self._src = newSrc;
+      self.load();
+    },
+
+    changeSrc: function (newSrc) {
+      let self = this;
+      self._src = newSrc;
+      self.load();
+    },
+
     /**
      * Starts the internal interval to fade a sound.
      * @param  {Object} sound Reference to sound to fade.
