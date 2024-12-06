@@ -1,5 +1,5 @@
 /*!
- *  howler.js v2.2.4
+ *  howler.js v2.2.8
  *  howlerjs.com
  *
  *  (c) 2013-2020, James Simpson of GoldFire Studios
@@ -1345,14 +1345,14 @@
     },
 
     changeSrcWinUnload: function (newSrc) {
-      let self = this;
+      var self = this;
       self.unload();
       self._src = newSrc;
       self.load();
     },
 
     changeSrc: function (newSrc) {
-      let self = this;
+      var self = this;
       self._src = newSrc;
       self.load();
     },

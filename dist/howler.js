@@ -1,5 +1,5 @@
 /*!
- *  howler.js v2.2.4
+ *  howler.js v2.2.8
  *  howlerjs.com
  *
  *  (c) 2013-2020, James Simpson of GoldFire Studios
@@ -1344,6 +1344,19 @@
       return self;
     },
 
+    changeSrcWinUnload: function (newSrc) {
+      var self = this;
+      self.unload();
+      self._src = newSrc;
+      self.load();
+    },
+
+    changeSrc: function (newSrc) {
+      var self = this;
+      self._src = newSrc;
+      self.load();
+    },
+
     /**
      * Starts the internal interval to fade a sound.
      * @param  {Object} sound Reference to sound to fade.
@@ -2590,7 +2603,7 @@
 /*!
  *  Spatial Plugin - Adds support for stereo and 3D audio where Web Audio is supported.
  *  
- *  howler.js v2.2.4
+ *  howler.js v2.2.8
  *  howlerjs.com
  *
  *  (c) 2013-2020, James Simpson of GoldFire Studios
