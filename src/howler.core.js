@@ -1781,7 +1781,7 @@
           // Release the Audio object back to the pool.
           Howler._releaseHtml5Audio(sounds[i]._node);
         }
-
+        sounds[i]._node.disconnect();
         // Empty out all of the nodes.
         delete sounds[i]._node;
 
